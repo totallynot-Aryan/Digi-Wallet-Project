@@ -1,77 +1,131 @@
-Digital Wallet Project
-Overview
+ 
+# Digital Wallet Project
+
+## Overview
+
 This Digital Wallet application is built using Java, Hibernate, and MySQL, following a layered architecture with DAO, Service, and Controller layers. It allows users to securely manage wallet transactions, set spending limits, and track expenses. The project implements various features with a focus on security, modular design, and modern development practices.
 
-Features
-User Login: Secure login using username and password.
-Wallet Management: Create, update, view, and delete wallets.
-Transaction Handling: Add, update, view, and manage transactions (credit and debit).
-Spending Limits: Set and enforce spending limits based on categories.
-Transaction Categories: Automatically categorize transactions and generate reports.
-Report Generation: Generate transaction reports for each user.
-Spending Over Limit Alerts: Alert and deny transactions when spending exceeds set limits.
+## Features
 
-Project Structure
-beans: Contains entity classes like User, Wallet, Transactions, Category, and SpendingLimit.
-DAO: Data Access Object interfaces and implementations.
-UserDAO, UserDAOImpl
-WalletDAO, WalletDAOImpl
-TransactionDAO, TransactionDAOImpl
-Service: Business logic services such as WalletService and ReportService.
-util: Utility classes like HibernateUtil for session management.
-ExceptionHandling: Custom exceptions for database and application errors.
-Main: Contains the main class for launching the application.
+* __User Login:__ Secure login using username and password.
 
-Setup and Installation
-Prerequisites
-Java 11+
-Maven 3.x
-MySQL Server
-MySQL Workbench
+* __Wallet Management:__ Create, update, view, and delete wallets.
 
-Steps to Run
-Clone the repository:
+* **Transaction Handling:** Add, update, view, and manage transactions (credit and debit).
+
+* **Spending Limits:** Set and enforce spending limits based on categories.
+
+* **Transaction Categories:** Automatically categorize transactions and generate reports.
+
+* **Report Generation:** Generate transaction reports for each user.
+
+* **Spending Over Limit Alerts:** Alert and deny transactions when spending exceeds set limits.
+
+## Project Structure
+
+* **beans:** Contains entity classes like User, Wallet, Transactions, Category, and SpendingLimit.
+
+* **DAO:** Data Access Object interfaces and implementations.
+
+    UserDAO, UserDAOImpl
+    
+    WalletDAO, WalletDAOImpl
+    
+    TransactionDAO, TransactionDAOImpl
+
+* **Service:** Business logic services such as WalletService and ReportService.
+
+* **util:** Utility classes like HibernateUtil for session management.
+
+* **ExceptionHandling:** Custom exceptions for database and application errors.
+
+* **Main:** Contains the main class for launching the application.
+
+## Setup and Installation
+
+**Prerequisites:**
+
+* Java 11+
+
+* Maven 3.x
+
+* MySQL Server
+
+* MySQL Workbench
+
+**How to Run:**
+
+* **Clone the repository:**
+
+```bash
 git clone https://github.com/your-username/digital-wallet.git
+
 cd digital-wallet
+```
 
-Configure MySQL Database:
-Create a MySQL database named digital_wallet.
-Update your database credentials in hibernate.cfg.xml.
+* **Configure MySQL Database:**
 
-Build the project:
+    Create a MySQL database named digital_wallet.
+
+    Update your database credentials in hibernate.cfg.xml.
+
+* **Build the project:**
+```bash
 mvn clean install
-
-Run the project:
+```
+* **Run the project:**
+```bash
 mvn exec:java -Dexec.mainClass="Main"
+```
+* **Database Configuration:**
 
-Database Configuration
-Ensure that hibernate.cfg.xml is correctly set up to connect to your MySQL database:
+    Ensure that hibernate.cfg.xml is correctly set up to connect to your MySQL database:
+```xml
 <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/digital_wallet</property>
+
 <property name="hibernate.connection.username">your-username</property>
+
 <property name="hibernate.connection.password">your-password</property>
+```
 
-Usage
+## Usage
 
-User Operations:
-Register a new user with a username, email, and password.
-Log in with valid credentials.
+**User Operations:**
 
-Wallet Operations:
-View wallet balance.
-Add or deduct funds.
-Automatically update balance upon transactions.
+* Register a new user with a username, email, and password.
 
-Transaction Management:
-Record credit and debit transactions.
-View the last 5 transactions for a logged-in user.
+* Log in with valid credentials.
 
-Spending Limit:
-Set spending limits based on categories.
-Alerts are triggered if spending exceeds the limit.
+**Wallet Operations:**
 
-Future Enhancements
-UI Integration: Planning to add a modern UI using front-end frameworks.
-Spring Boot Integration: Option to include Spring Boot for better modularization and web services.
+* View wallet balance.
 
-Contributing
+* Add or deduct funds.
+
+* Automatically update balance upon transactions.
+
+**Transaction Management:**
+
+* Record credit and debit transactions.
+
+* View the last 5 transactions for a logged-in user.
+
+
+**Spending Limit:**
+
+* Set spending limits based on categories.
+
+* Alerts are triggered if spending exceeds the limit.
+
+## Future Enhancements
+
+* **UI Integration:** Planning to add a modern UI using front-end frameworks.
+
+* **Spring Boot Integration:** Option to include Spring Boot for better modularization and web services.
+
+
+## Contributing
+
 Feel free to contribute by submitting a pull request. For major changes, please open an issue first to discuss what you would like to change.
+
+
