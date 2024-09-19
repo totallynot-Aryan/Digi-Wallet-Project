@@ -1,5 +1,5 @@
  
-# Digital Wallet Project
+# Digi-Wallet Project
 
 ## Overview
 
